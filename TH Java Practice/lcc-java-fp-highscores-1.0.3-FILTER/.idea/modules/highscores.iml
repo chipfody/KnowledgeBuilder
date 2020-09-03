@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="highscores" external.linked.project.path="$MODULE_DIR$/../../lcc-java-fp-highscores-1.0.3-FILTER" external.root.project.path="$MODULE_DIR$/../../lcc-java-fp-highscores-1.0.3-FILTER" external.system.id="GRADLE" external.system.module.group="com.teamtreehouse.challenges" external.system.module.version="1.0.3-FILTER" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../lcc-java-fp-highscores-1.0.3-FILTER">
+      <excludeFolder url="file://$MODULE_DIR$/../../lcc-java-fp-highscores-1.0.3-FILTER/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../lcc-java-fp-highscores-1.0.3-FILTER/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
