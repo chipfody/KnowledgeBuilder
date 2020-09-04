@@ -7,6 +7,7 @@ public class FibonacciSequence {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter a number 0 or greater: ");
+        scanner.close();
 
         int number = scanner.nextInt();
         int currentNumb = 1;

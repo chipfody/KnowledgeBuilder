@@ -11,6 +11,7 @@ public class CalculateExponent {
         int baseNumb = scanner.nextInt();
         System.out.println("Please enter and exponent: ");
         int exponent = scanner.nextInt();
+        scanner.close();
 
         for (int i = 0; i <= exponent; i++) {
             powerOf(baseNumb, i);

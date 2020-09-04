@@ -9,8 +9,9 @@ public class ReverseString {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Please enter a word to reverse:");
-        String word = scanner.next();
-        System.out.println("The word " + word + " reversed in Method A is: " + reverseMethodA(word));
+        String word = scanner.nextLine();
+        scanner.close();
+        System.out.println("The word \"" + word + "\" reversed in Method A is: " + reverseMethodA(word));
         System.out.println("The word " + word + " reversed in Method B is: " + reverseMethodB(word));
 
         }
