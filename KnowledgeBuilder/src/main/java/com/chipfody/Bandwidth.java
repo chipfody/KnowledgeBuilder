@@ -41,10 +41,6 @@ Given a measured file transfer time in seconds and file size in mebibytes (MiB),
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.math.BigInteger;
-import java.util.Arrays;
-//import java.nio.charset.StandardCharsets;
-
 
 public class Bandwidth {
         /**
@@ -59,13 +55,12 @@ public class Bandwidth {
             while ((line = in.readLine()) != null) {
                 String[] data = line.split(" ");
 
-                double fileSize = Integer.parseInt(data[0]) * 1.048576;
-                double bandWidth = Integer.parseInt(data[1]) * .125;
-                System.out.println("fs = " + fileSize + " " + " bw =" + bandWidth);
+                Double fileSize = Double.parseDouble(data[0]) * 1.048576;
+                Double bandWidth = Double.parseDouble(data[1]) * .125;
 
-                double transferTime = Math.ceil(fileSize / bandWidth);
+                long transferTime = (long)Math.ceil(fileSize / bandWidth);
 
-                System.out.println((BigInteger)transferTime);
+                System.out.println(transferTime);
             }
         }
     }
