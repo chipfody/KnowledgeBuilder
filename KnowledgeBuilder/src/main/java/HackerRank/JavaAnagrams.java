@@ -13,9 +13,7 @@ class JavaAnagrams {
         } else {
             String sortA = sorted(a.toLowerCase());
             String sortB = sorted(b.toLowerCase());
-            //System.out.println(sortA + " " + sortB);
             for (int i = 0; i < sortA.length(); i++) {
-                //System.out.println(sortA.charAt(i) + " " + sortB.charAt(i));
                 if (sortA.charAt(i) != sortB.charAt(i)) {
                     anagram = false;
                     break;
