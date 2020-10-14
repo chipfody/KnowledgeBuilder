@@ -2,6 +2,7 @@ package com.chipfody;
 
 public class FindDisarians {
 
+
     public static void main(String[] args) {
 
         int start = 100;
