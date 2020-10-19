@@ -6,9 +6,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import static org.junit.Assert.*;
-
-public class FindMultipleWordsInAStringTest {
+public class FindThingsInAStringTest {
 
     @Test
     public void testFindMatches() {
@@ -17,7 +15,7 @@ public class FindMultipleWordsInAStringTest {
         String testWord = "category:";
         //when
         ArrayList<String> expected = new ArrayList<>(Arrays.asList("apparel", "makeup", "furniture"));
-        ArrayList<String> actual = FindMultipleWordsInAString.findMatches(testString1, testWord);
+        ArrayList<String> actual = FindingThingsInAString.findMatches(testString1, testWord);
        // System.out.println(actual);
         //then
         Assert.assertEquals(expected, actual);
@@ -31,7 +29,36 @@ public class FindMultipleWordsInAStringTest {
 
         //when
         ArrayList<String> expected = new ArrayList<>();
-        ArrayList<String> actual = FindMultipleWordsInAString.findMatches(testString2, testWord2);
+        ArrayList<String> actual = FindingThingsInAString.findMatches(testString2, testWord2);
+
+        //then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testWordCount() {
+        //given
+        String testString = "One fish, two fish, red fish, blue fish:";
+        String testWord = "cow";
+
+        //when
+        int expected = 0;
+        int actual = FindingThingsInAString.wordCount(testString, testWord);
+
+        //then
+        Assert.assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void testWordCount2() {
+        //given
+        String testString2 = "One fish, two fish, red fish, blue fish:";
+        String testWord2 = "fish";
+
+        //when
+        int expected = 4;
+        int actual = FindingThingsInAString.wordCount(testString2, testWord2);
 
         //then
         Assert.assertEquals(expected, actual);
