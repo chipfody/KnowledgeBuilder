@@ -68,4 +68,38 @@ public class StringManipulationTest {
         Assert.assertTrue(expected13);
     }
 
+    @Test
+    public void testCodeCount() {
+        int expected1 = StringManipulation.countCode("aaacodebbb");
+        int expected2 = StringManipulation.countCode("codexxcode");
+        int expected3 = StringManipulation.countCode("cozexxcope");
+        int expected4 = StringManipulation.countCode("cozfxxcope");
+        int expected5 = StringManipulation.countCode("xxcozeyycop");
+        int expected6 = StringManipulation.countCode("cozcop");
+        int expected7 = StringManipulation.countCode("abcxyz");
+        int expected8 = StringManipulation.countCode("code");
+        int expected9 = StringManipulation.countCode("ode");
+        int expected10 = StringManipulation.countCode("c");
+        int expected11 = StringManipulation.countCode("");
+        int expected12 = StringManipulation.countCode("AAcodeBBcoleCCccoreDD");
+        int expected13 = StringManipulation.countCode("AAcodeBBcoleCCccorfDD");
+        int expected14 = StringManipulation.countCode("coAcodeBcoleccoreDD");
+
+        Assert.assertEquals(expected1, 1);
+        Assert.assertEquals(expected2, 2);
+        Assert.assertEquals(expected3, 2);
+        Assert.assertEquals(expected4, 1);
+        Assert.assertEquals(expected5, 1);
+        Assert.assertEquals(expected6, 0);
+        Assert.assertEquals(expected7, 0);
+        Assert.assertEquals(expected8, 1);
+        Assert.assertEquals(expected9, 0);
+        Assert.assertEquals(expected10, 0);
+        Assert.assertEquals(expected11, 0);
+        Assert.assertEquals(expected12, 3);
+        Assert.assertEquals(expected13, 2);
+        Assert.assertEquals(expected14, 3);
+
+    }
+
 }
