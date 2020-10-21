@@ -39,66 +39,66 @@ public class StringManipulationTest {
 
     @Test
     public void testCatDog() {
-        boolean expected1 = StringManipulation.catDog("catdog");
-        boolean expected2 = StringManipulation.catDog("catcat");
-        boolean expected3 = StringManipulation.catDog("1cat1cadodog");
-        boolean expected4 = StringManipulation.catDog("catxxdogxxxdog");
-        boolean expected5 = StringManipulation.catDog("catxdogxdogxcat");
-        boolean expected6 = StringManipulation.catDog("catxdogxdogxca");
-        boolean expected7 = StringManipulation.catDog("dogdogcat");
-        boolean expected8 = StringManipulation.catDog("dogogcat");
-        boolean expected9 = StringManipulation.catDog("dog");
-        boolean expected10 = StringManipulation.catDog("cat");
-        boolean expected11 = StringManipulation.catDog("ca");
-        boolean expected12 = StringManipulation.catDog("c");
-        boolean expected13 = StringManipulation.catDog("");
+        boolean actual1 = StringManipulation.catDog("catdog");
+        boolean actual2 = StringManipulation.catDog("catcat");
+        boolean actual3 = StringManipulation.catDog("1cat1cadodog");
+        boolean actual4 = StringManipulation.catDog("catxxdogxxxdog");
+        boolean actual5 = StringManipulation.catDog("catxdogxdogxcat");
+        boolean actual6 = StringManipulation.catDog("catxdogxdogxca");
+        boolean actual7 = StringManipulation.catDog("dogdogcat");
+        boolean actual8 = StringManipulation.catDog("dogogcat");
+        boolean actual9 = StringManipulation.catDog("dog");
+        boolean actual10 = StringManipulation.catDog("cat");
+        boolean actual11 = StringManipulation.catDog("ca");
+        boolean actual12 = StringManipulation.catDog("c");
+        boolean actual13 = StringManipulation.catDog("");
 
-        Assert.assertTrue(expected1);
-        Assert.assertFalse(expected2);
-        Assert.assertTrue(expected3);
-        Assert.assertFalse(expected4);
-        Assert.assertTrue(expected5);
-        Assert.assertFalse(expected6);
-        Assert.assertFalse(expected7);
-        Assert.assertTrue(expected8);
-        Assert.assertFalse(expected9);
-        Assert.assertFalse(expected10);
-        Assert.assertTrue(expected11);
-        Assert.assertTrue(expected12);
-        Assert.assertTrue(expected13);
+        Assert.assertTrue(actual1);
+        Assert.assertFalse(actual2);
+        Assert.assertTrue(actual3);
+        Assert.assertFalse(actual4);
+        Assert.assertTrue(actual5);
+        Assert.assertFalse(actual6);
+        Assert.assertFalse(actual7);
+        Assert.assertTrue(actual8);
+        Assert.assertFalse(actual9);
+        Assert.assertFalse(actual10);
+        Assert.assertTrue(actual11);
+        Assert.assertTrue(actual12);
+        Assert.assertTrue(actual13);
     }
 
     @Test
     public void testCodeCount() {
-        int expected1 = StringManipulation.countCode("aaacodebbb");
-        int expected2 = StringManipulation.countCode("codexxcode");
-        int expected3 = StringManipulation.countCode("cozexxcope");
-        int expected4 = StringManipulation.countCode("cozfxxcope");
-        int expected5 = StringManipulation.countCode("xxcozeyycop");
-        int expected6 = StringManipulation.countCode("cozcop");
-        int expected7 = StringManipulation.countCode("abcxyz");
-        int expected8 = StringManipulation.countCode("code");
-        int expected9 = StringManipulation.countCode("ode");
-        int expected10 = StringManipulation.countCode("c");
-        int expected11 = StringManipulation.countCode("");
-        int expected12 = StringManipulation.countCode("AAcodeBBcoleCCccoreDD");
-        int expected13 = StringManipulation.countCode("AAcodeBBcoleCCccorfDD");
-        int expected14 = StringManipulation.countCode("coAcodeBcoleccoreDD");
+        int actual1 = StringManipulation.countCode("aaacodebbb");
+        int actual2 = StringManipulation.countCode("codexxcode");
+        int actual3 = StringManipulation.countCode("cozexxcope");
+        int actual4 = StringManipulation.countCode("cozfxxcope");
+        int actual5 = StringManipulation.countCode("xxcozeyycop");
+        int actual6 = StringManipulation.countCode("cozcop");
+        int actual7 = StringManipulation.countCode("abcxyz");
+        int actual8 = StringManipulation.countCode("code");
+        int actual9 = StringManipulation.countCode("ode");
+        int actual10 = StringManipulation.countCode("c");
+        int actual11 = StringManipulation.countCode("");
+        int actual12 = StringManipulation.countCode("AAcodeBBcoleCCccoreDD");
+        int actual13 = StringManipulation.countCode("AAcodeBBcoleCCccorfDD");
+        int actual14 = StringManipulation.countCode("coAcodeBcoleccoreDD");
 
-        Assert.assertEquals(expected1, 1);
-        Assert.assertEquals(expected2, 2);
-        Assert.assertEquals(expected3, 2);
-        Assert.assertEquals(expected4, 1);
-        Assert.assertEquals(expected5, 1);
-        Assert.assertEquals(expected6, 0);
-        Assert.assertEquals(expected7, 0);
-        Assert.assertEquals(expected8, 1);
-        Assert.assertEquals(expected9, 0);
-        Assert.assertEquals(expected10, 0);
-        Assert.assertEquals(expected11, 0);
-        Assert.assertEquals(expected12, 3);
-        Assert.assertEquals(expected13, 2);
-        Assert.assertEquals(expected14, 3);
+        Assert.assertEquals(1, actual1);
+        Assert.assertEquals(2, actual2);
+        Assert.assertEquals(2, actual3);
+        Assert.assertEquals(1, actual4);
+        Assert.assertEquals(1, actual5);
+        Assert.assertEquals(0, actual6);
+        Assert.assertEquals(0, actual7);
+        Assert.assertEquals(1, actual8);
+        Assert.assertEquals(0, actual9);
+        Assert.assertEquals(0, actual10);
+        Assert.assertEquals(0, actual11);
+        Assert.assertEquals(3, actual12);
+        Assert.assertEquals(2, actual13);
+        Assert.assertEquals(3, actual14);
 
     }
 
