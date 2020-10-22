@@ -102,4 +102,36 @@ public class StringManipulationTest {
 
     }
 
+    @Test
+    public void testMaxEnd3() {
+    //Given
+        int[] testArray = new int[] {1, 2, 3};
+        int[] testArray2 = new int[] {11,5, 9};
+        int[] testArray3 = new int[] {2, 11, 3};
+        int[] testArray4 = new int[] {11, 3, 3};
+        int[] testArray5 = new int[] {3, 11, 11};
+        int[] testArray6 = new int[] {2, 2, 2};
+        int[] testArray7 = new int[] {2, 11, 2};
+        int[] testArray8 = new int[] {0, 0, 1};
+
+        int [] expected = new int[] {3, 3, 3};
+        int [] expected2 = new int[] {11, 11, 11};
+        int [] expected3 = new int[] {3, 3, 3};
+        int [] expected4 = new int[] {11, 11, 11};
+        int [] expected5 = new int[] {11, 11, 11};
+        int [] expected6 = new int[] {2, 2, 2};
+        int [] expected7 = new int[] {2, 2, 2};
+        int [] expected8 = new int[] {1, 1, 1};
+
+        Assert.assertArrayEquals(expected, StringManipulation.maxEnd3(testArray));
+        Assert.assertArrayEquals(expected2, StringManipulation.maxEnd3(testArray2));
+        Assert.assertArrayEquals(expected3, StringManipulation.maxEnd3(testArray3));
+        Assert.assertArrayEquals(expected4, StringManipulation.maxEnd3(testArray4));
+        Assert.assertArrayEquals(expected5, StringManipulation.maxEnd3(testArray5));
+        Assert.assertArrayEquals(expected6, StringManipulation.maxEnd3(testArray6));
+        Assert.assertArrayEquals(expected7, StringManipulation.maxEnd3(testArray7));
+        Assert.assertArrayEquals(expected8, StringManipulation.maxEnd3(testArray8));
+
+    }
+
 }
