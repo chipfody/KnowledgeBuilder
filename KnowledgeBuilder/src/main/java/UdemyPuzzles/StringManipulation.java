@@ -83,4 +83,12 @@ public class StringManipulation {
         return nums;
     }
 
+    public static String stringTimes(String str, int n) {
+        String newString = "";
+        for (int i = 1; i <= n; i++) {
+            newString += str;
+        }
+        return newString;
+    }
+
 }

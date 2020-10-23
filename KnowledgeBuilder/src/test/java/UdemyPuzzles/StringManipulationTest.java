@@ -133,5 +133,31 @@ public class StringManipulationTest {
         Assert.assertArrayEquals(expected8, StringManipulation.maxEnd3(testArray8));
 
     }
+    @Test
+    public void testStringTimes() {
+
+        String expected1 = "HiHi";
+        String expected2 = "HiHiHi";
+        String expected3 = "Hi";
+        String expected4 = "";
+        String expected5 = "HiHiHiHiHi";
+        String expected6 = "Oh Boy!Oh Boy!";
+        String expected7 = "xxxx";
+        String expected8 = "";
+        String expected9 = "codecode";
+        String expected10 = "codecodecode";
+
+
+        Assert.assertEquals(expected1, StringManipulation.stringTimes("Hi", 2));
+        Assert.assertEquals(expected2, StringManipulation.stringTimes("Hi", 3));
+        Assert.assertEquals(expected3, StringManipulation.stringTimes("Hi", 1));
+        Assert.assertEquals(expected4, StringManipulation.stringTimes("Hi", 0));
+        Assert.assertEquals(expected5, StringManipulation.stringTimes("Hi", 5));
+        Assert.assertEquals(expected6, StringManipulation.stringTimes("Oh Boy!", 2));
+        Assert.assertEquals(expected7, StringManipulation.stringTimes("x", 4));
+        Assert.assertEquals(expected8, StringManipulation.stringTimes("", 4));
+        Assert.assertEquals(expected9, StringManipulation.stringTimes("code", 2));
+        Assert.assertEquals(expected10, StringManipulation.stringTimes("code", 3));
+    }
 
 }
