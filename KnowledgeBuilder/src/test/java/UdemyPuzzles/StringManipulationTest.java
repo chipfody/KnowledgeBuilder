@@ -160,4 +160,34 @@ public class StringManipulationTest {
         Assert.assertEquals(expected10, StringManipulation.stringTimes("code", 3));
     }
 
+    @Test
+    public void testFrontTimes() {
+        //Given
+        String expected1 = "ChoCho";
+        String expected2 = "ChoChoCho";
+        String expected3 = "AbcAbcAbc";
+        String expected4 = "AbAbAbAb";
+        String expected5 = "AAAA";
+        String expected6 = "";
+        String expected7 = "";
+
+        //When
+        String actual1 = StringManipulation.frontTimes("Chocolate", 2);
+        String actual2 = StringManipulation.frontTimes("Chocolate", 3);
+        String actual3 = StringManipulation.frontTimes("Abc", 3);
+        String actual4 = StringManipulation.frontTimes("Ab", 4);
+        String actual5 = StringManipulation.frontTimes("A", 4);
+        String actual6 = StringManipulation.frontTimes("", 4);
+        String actual7 = StringManipulation.frontTimes("Abc", 0);
+
+        //Then
+        Assert.assertEquals(expected1, actual1);
+        Assert.assertEquals(expected2, actual2);
+        Assert.assertEquals(expected3, actual3);
+        Assert.assertEquals(expected4, actual4);
+        Assert.assertEquals(expected5, actual5);
+        Assert.assertEquals(expected6, actual6);
+        Assert.assertEquals(expected7, actual7);
+    }
+
 }

@@ -91,4 +91,21 @@ public class StringManipulation {
         return newString;
     }
 
+    public static String frontTimes(String str, int n) {
+
+        String newString = "";
+        int run = 3;
+
+        if (str.length()< 3) {
+            run = str.length();
+        }
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 0; j < run; j++) {
+                newString += str.charAt(j);
+            }
+        }
+        return newString;
+    }
+
 }
