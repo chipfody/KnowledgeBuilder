@@ -7,8 +7,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.Assert.*;
-
 public class ArrayWorkTest {
 
     @Test
@@ -58,5 +56,37 @@ public class ArrayWorkTest {
         Assert.assertEquals(expectedList6, actualList6);
         Assert.assertEquals(expectedList7, actualList7);
     }
+
+    @Test
+    public void testNo9() {
+        //Given
+        ArrayList<Integer> expectedList1 = new ArrayList<>(Arrays.asList(1, 2));
+        ArrayList<Integer> expectedList2 = new ArrayList<>(Arrays.asList(3));
+        ArrayList<Integer> expectedList3 = new ArrayList<>(Arrays.asList(1, 2, 3));
+        ArrayList<Integer> expectedList4 = new ArrayList<>(Arrays.asList(45, 90, 28, 13, 0));
+        ArrayList<Integer> expectedList5 = new ArrayList<>((Arrays.asList()));
+        ArrayList<Integer> expectedList6 = new ArrayList<>(Arrays.asList());
+        ArrayList<Integer> expectedList7 = new ArrayList<>(Arrays.asList(0, 0));
+
+        //when
+        List<Integer> actualList1 = ArrayWork.no9(Arrays.asList(1, 2, 19));
+        List<Integer> actualList2 = ArrayWork.no9(Arrays.asList(9, 19, 29, 3));
+        List<Integer> actualList3 = ArrayWork.no9(Arrays.asList(1, 2, 3));
+        List<Integer> actualList4 = ArrayWork.no9(Arrays.asList(45, 99, 90, 28, 13, 999, 0));
+        List<Integer> actualList5 = ArrayWork.no9(Arrays.asList());
+        List<Integer> actualList6 = ArrayWork.no9(Arrays.asList(9));
+        List<Integer> actualList7 = ArrayWork.no9(Arrays.asList(0, 9, 0));
+
+        //then
+        Assert.assertEquals(expectedList1, actualList1);
+        Assert.assertEquals(expectedList2, actualList2);
+        Assert.assertEquals(expectedList3, actualList3);
+        Assert.assertEquals(expectedList4, actualList4);
+        Assert.assertEquals(expectedList5, actualList5);
+        Assert.assertEquals(expectedList6, actualList6);
+        Assert.assertEquals(expectedList7, actualList7);
+    }
+
+
 
 }

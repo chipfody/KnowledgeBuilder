@@ -30,5 +30,23 @@ public class ArrayWork {
                 noNegList.add(num);
         }
         return noNegList;
+
+//  Alternate solution:
+//        public List<Integer> noNeg(List<Integer> nums) {
+//            nums.removeIf(n -> n < 0);
+//            return nums;
     }
+
+    public static List<Integer> no9(List<Integer> nums) {
+        List no9List = new ArrayList<>();
+        for (Integer num : nums) {
+            if (num % 10 != 9)
+                no9List.add(num);
+        }
+        return no9List;
+
+//        nums.removeIf(n -> n % 10 == 9);
+//        return nums;
+    }
+
 }
