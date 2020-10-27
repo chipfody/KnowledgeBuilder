@@ -1,5 +1,8 @@
 package CodingBat;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ArrayWork {
 
 
@@ -15,5 +18,17 @@ public class ArrayWork {
             }
         }
         return result;
+    }
+
+
+//    Given a list of integers, return a list of the integers, omitting any that are less than 0
+
+    public static List<Integer> noNeg(List<Integer> nums) {
+        List noNegList = new ArrayList<>();
+        for (Integer num : nums) {
+            if (num >=0)
+                noNegList.add(num);
+        }
+        return noNegList;
     }
 }
