@@ -190,4 +190,51 @@ public class StringManipulationTest {
         Assert.assertEquals(expected7, actual7);
     }
 
+    @Test
+    public void testEndOther() {
+        String a1 = "Hiabc";
+        String b1 = "abc";
+        String a2 = "AbC";
+        String b2 = "HiaBc";
+        String a3 = "abc";
+        String b3 = "abXabc";
+        String a4 = "Hiabc";
+        String b4 = "abcd";
+        String a5 = "Hiabc";
+        String b5 = "bc";
+        String a6 = "Hiabcx";
+        String b6 = "bc";
+        String a7 = "abc";
+        String b7 = "abc";
+        String a8 = "xyz";
+        String b8 = "12xyz";
+        String a9 = "yz";
+        String b9 = "12xz";
+        String a10 = "Z";
+        String b10 = "12xz";
+        String a11 = "12";
+        String b11 = "12";
+        String a12 = "abcXYZ";
+        String b12 = "abcDEF";
+        String a13 = "ab";
+        String b13 = "ab12";
+        String a14 = "ab";
+        String b14 = "12Ab";
+
+        Assert.assertTrue(StringManipulation.endOther(a1, b1));
+        Assert.assertTrue(StringManipulation.endOther(a2, b2));
+        Assert.assertTrue(StringManipulation.endOther(a3, b3));
+        Assert.assertFalse(StringManipulation.endOther(a4, b4));
+        Assert.assertTrue(StringManipulation.endOther(a5, b5));
+        Assert.assertFalse(StringManipulation.endOther(a6, b6));
+        Assert.assertTrue(StringManipulation.endOther(a7, b7));
+        Assert.assertTrue(StringManipulation.endOther(a8, b8));
+        Assert.assertFalse(StringManipulation.endOther(a9, b9));
+        Assert.assertTrue(StringManipulation.endOther(a10, b10));
+        Assert.assertTrue(StringManipulation.endOther(a11, b11));
+        Assert.assertFalse(StringManipulation.endOther(a12, b12));
+        Assert.assertFalse(StringManipulation.endOther(a13, b13));
+        Assert.assertTrue(StringManipulation.endOther(a14, b14));
+    }
+
 }
