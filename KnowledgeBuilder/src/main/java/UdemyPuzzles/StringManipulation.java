@@ -75,7 +75,7 @@ public class StringManipulation {
 */
 
     public static int[] maxEnd3(int[] nums) {
-        int largest = nums[0] > nums[2] ? nums[0] : nums[2];
+        int largest = nums[0] > nums[2] ? nums[0] : nums[2];  // can also use Math.max(nums[0], nums[2]);
 
         for(int i = 0; i < 3; i++) {
             nums[i] = largest;
