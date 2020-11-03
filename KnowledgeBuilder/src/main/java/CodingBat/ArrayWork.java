@@ -49,4 +49,16 @@ public class ArrayWork {
 //        return nums;
     }
 
+//    Given an array length 1 or more of ints, return the difference between the largest and smallest values in the array.
+
+    public int bigDiff(int[] nums) {
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
+        for (int num : nums) {
+            if (num < min) min = num;
+            if (num > max) max = num;
+        }
+        return max - min;
+    }
+
 }
