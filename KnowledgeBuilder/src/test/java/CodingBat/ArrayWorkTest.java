@@ -89,7 +89,35 @@ public class ArrayWorkTest {
 
     @Test
     public void testBigDiff() {
+        Assert.assertEquals(7, ArrayWork.bigDiff(new int[] {10, 3, 5, 6}));
+        Assert.assertEquals(8, ArrayWork.bigDiff(new int[] {7, 2, 10, 9}));
+        Assert.assertEquals(8, ArrayWork.bigDiff(new int[] {2, 10, 7, 2}));
+        Assert.assertEquals(8, ArrayWork.bigDiff(new int[] {2, 10}));
+        Assert.assertEquals(8, ArrayWork.bigDiff(new int[] {10, 2}));
+        Assert.assertEquals(10, ArrayWork.bigDiff(new int[] {10, 0}));
+        Assert.assertEquals(1, ArrayWork.bigDiff(new int[] {2, 3}));
+        Assert.assertEquals(0, ArrayWork.bigDiff(new int[] {2, 2}));
+        Assert.assertEquals(0, ArrayWork.bigDiff(new int[] {2}));
+        Assert.assertEquals(8, ArrayWork.bigDiff(new int[] {5, 1, 6, 1, 9, 9}));
+        Assert.assertEquals(3, ArrayWork.bigDiff(new int[] {7, 6, 8, 5}));
+        Assert.assertEquals(3, ArrayWork.bigDiff(new int[] {7, 7, 6, 8, 5, 5, 6}));
+    }
 
+    @Test
+
+    public void testModThree() {
+        Assert.assertTrue(ArrayWork.modThree(new int[] {2, 1, 3, 5}));
+        Assert.assertFalse(ArrayWork.modThree(new int[] {2, 1, 2, 5}));
+        Assert.assertTrue(ArrayWork.modThree(new int[] {2, 4, 2, 5}));
+        Assert.assertFalse(ArrayWork.modThree(new int[] {1, 2, 1, 2, 1}));
+        Assert.assertTrue(ArrayWork.modThree(new int[] {9, 9, 9}));
+        Assert.assertFalse(ArrayWork.modThree(new int[] {1, 2, 1, 2, 1}));
+        Assert.assertFalse(ArrayWork.modThree(new int[] {1, 2, 1}));
+        Assert.assertFalse(ArrayWork.modThree(new int[] {1, 2}));
+        Assert.assertFalse(ArrayWork.modThree(new int[] {1}));
+        Assert.assertFalse(ArrayWork.modThree(new int[] {}));
+        Assert.assertFalse(ArrayWork.modThree(new int[] {1, 2, 1, 2, 1}));
+        Assert.assertTrue(ArrayWork.modThree(new int[] {9, 7, 2, 9, 2, 2, 6}));
     }
 
 

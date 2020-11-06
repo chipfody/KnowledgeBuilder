@@ -51,7 +51,7 @@ public class ArrayWork {
 
 //    Given an array length 1 or more of ints, return the difference between the largest and smallest values in the array.
 
-    public int bigDiff(int[] nums) {
+    public static int bigDiff(int[] nums) {
         int max = Integer.MIN_VALUE;
         int min = Integer.MAX_VALUE;
         for (int num : nums) {
@@ -101,7 +101,7 @@ public boolean scoresClump(int[] scores) {
 
 //    Given an array of ints, return true if the array contains either 3 even or 3 odd values all next to each other.
 
-    public boolean modThree(int[] nums) {
+    public static boolean modThree(int[] nums) {
 
         for (int i = 0; i < nums.length -2; i++) {
             if ( nums[i] % 2 == 0 && nums[i + 1] % 2 == 0 && nums[i + 2] % 2 == 0 ) {
