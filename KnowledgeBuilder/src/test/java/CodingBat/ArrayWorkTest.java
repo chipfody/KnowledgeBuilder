@@ -120,6 +120,46 @@ public class ArrayWorkTest {
         Assert.assertTrue(ArrayWork.modThree(new int[] {9, 7, 2, 9, 2, 2, 6}));
     }
 
+    @Test
+    public void testTenRun() {
+        int [] expected1 = new int[] {2, 10, 10, 10, 20, 20};
+        int [] expected2 = new int[] {10, 10, 20, 20};
+        int [] expected3 = new int[] {10, 10, 10, 20};
+        int [] expected4 = new int[] {1, 2, 50, 50};
+        int [] expected5 = new int[] {1, 20, 50, 50};
+        int [] expected6 = new int[] {10, 10};
+        int [] expected7 = new int[] {10, 10};
+        int [] expected8 = new int[] {0, 0};
+        int [] expected9 = new int[] {1, 2};
+        int [] expected10 = new int[] {1};
+        int [] expected11 = new int[0];
+
+        int [] actual1 = ArrayWork.tenRun(new int[] {2, 10, 3, 4, 20, 5});
+        int [] actual2 = ArrayWork.tenRun(new int[] {10, 1, 20, 2});
+        int [] actual3 = ArrayWork.tenRun(new int[] {10, 1, 9, 20});
+        int [] actual4 = ArrayWork.tenRun(new int[] {1, 2, 50, 1});
+        int [] actual5 = ArrayWork.tenRun(new int[] {1, 20, 50, 1});
+        int [] actual6 = ArrayWork.tenRun(new int[] {10, 10});
+        int [] actual7 = ArrayWork.tenRun(new int[] {10, 2});
+        int [] actual8 = ArrayWork.tenRun(new int[] {0, 2});
+        int [] actual9 = ArrayWork.tenRun(new int[] {1, 2});
+        int [] actual10 = ArrayWork.tenRun(new int[]{1});
+        int [] actual11 = ArrayWork.tenRun(new int[] {});
+
+        Assert.assertArrayEquals(expected1, actual1);
+        Assert.assertArrayEquals(expected2, actual2);
+        Assert.assertArrayEquals(expected3, actual3);
+        Assert.assertArrayEquals(expected4, actual4);
+        Assert.assertArrayEquals(expected5, actual5);
+        Assert.assertArrayEquals(expected6, actual6);
+        Assert.assertArrayEquals(expected7, actual7);
+        Assert.assertArrayEquals(expected8, actual8);
+        Assert.assertArrayEquals(expected9, actual9);
+        Assert.assertArrayEquals(expected10, actual10);
+        Assert.assertArrayEquals(expected11, actual11);
+    }
+
+
 
 
 }
