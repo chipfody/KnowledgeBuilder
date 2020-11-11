@@ -122,6 +122,7 @@ public class ArrayWorkTest {
 
     @Test
     public void testTenRun() {
+        //Given
         int [] expected1 = new int[] {2, 10, 10, 10, 20, 20};
         int [] expected2 = new int[] {10, 10, 20, 20};
         int [] expected3 = new int[] {10, 10, 10, 20};
@@ -134,6 +135,7 @@ public class ArrayWorkTest {
         int [] expected10 = new int[] {1};
         int [] expected11 = new int[0];
 
+        //When
         int [] actual1 = ArrayWork.tenRun(new int[] {2, 10, 3, 4, 20, 5});
         int [] actual2 = ArrayWork.tenRun(new int[] {10, 1, 20, 2});
         int [] actual3 = ArrayWork.tenRun(new int[] {10, 1, 9, 20});
@@ -146,6 +148,7 @@ public class ArrayWorkTest {
         int [] actual10 = ArrayWork.tenRun(new int[]{1});
         int [] actual11 = ArrayWork.tenRun(new int[] {});
 
+        //Then
         Assert.assertArrayEquals(expected1, actual1);
         Assert.assertArrayEquals(expected2, actual2);
         Assert.assertArrayEquals(expected3, actual3);
