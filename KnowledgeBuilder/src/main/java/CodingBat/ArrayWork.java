@@ -1,6 +1,7 @@
 package CodingBat;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ArrayWork {
@@ -135,5 +136,30 @@ public boolean scoresClump(int[] scores) {
             }
         }
         return result;
+    }
+
+/*
+    Given an array of scores, compute the int average of the first half and the second half, and return whichever is larger.
+    We'll say that the second half begins at index length/2. The array length will be at least 2.
+*/
+
+    public static int scoresAverage(int[] scores) {
+
+        int[] frontHalf = Arrays.copyOfRange(scores, 0, scores.length/2);
+        int[] backHalf = Arrays.copyOfRange(scores, scores.length/2, scores.length);
+
+        int frontAverage = average(frontHalf);
+        int backAverage = average(backHalf);
+
+        return frontAverage > backAverage ? frontAverage : backAverage;
+
+    }
+
+    public static int average(int[] halfScore) {
+        int sum = 0;
+        for (int score : halfScore)
+            sum += score;
+
+        return sum/halfScore.length;
     }
 }
