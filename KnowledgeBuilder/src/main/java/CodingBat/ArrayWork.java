@@ -175,6 +175,9 @@ public boolean scoresClump(int[] scores) {
         for (int i = start; i < end; i++) {
             sum += scores[i];
         }
-        return sum / scores.length;
+
+        return sum / (scores.length / 2);
     }
+
+
 }
