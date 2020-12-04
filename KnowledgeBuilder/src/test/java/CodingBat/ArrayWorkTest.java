@@ -192,4 +192,32 @@ public class ArrayWorkTest {
 
     }
 
-}
+    @Test
+    public void testScoresAverageV2() {
+        //Given
+        int expected1 = 4;
+        int expected2 = 4;
+        int expected3 = 4;
+        int expected4 = 6;
+        int expected5 = 5;
+        int expected6 = 5;
+
+        //when
+
+        int actual1 = ArrayWork.scoresAverageV2(new int[]{2, 2, 4, 4});
+        int actual2 = ArrayWork.scoresAverageV2(new int[]{4, 4, 4, 2, 2, 2});
+        int actual3 = ArrayWork.scoresAverageV2(new int[]{3, 4, 5, 1, 2, 3});
+        int actual4 = ArrayWork.scoresAverageV2(new int[]{5, 6});
+        int actual5 = ArrayWork.scoresAverageV2(new int[]{5, 4});
+        int actual6 = ArrayWork.scoresAverageV2(new int[]{5, 4, 5, 6, 2, 1, 2, 3});
+
+        //then
+        Assert.assertEquals(expected1, actual1);
+        Assert.assertEquals(expected2, actual2);
+        Assert.assertEquals(expected3, actual3);
+        Assert.assertEquals(expected4, actual4);
+        Assert.assertEquals(expected5, actual5);
+        Assert.assertEquals(expected6, actual6);
+    }
+
+    }

@@ -162,4 +162,19 @@ public boolean scoresClump(int[] scores) {
 
         return sum/halfScore.length;
     }
+
+    public static int scoresAverageV2(int[] scores) {
+        int midpoint = scores.length / 2;
+        int frontAverage = getAverageV2(scores, 0, midpoint);
+        int backAverage = getAverageV2 (scores, midpoint, scores.length);
+
+        return frontAverage > backAverage ? frontAverage : backAverage;
+    }
+    public static int getAverageV2(int[] scores, int start, int end) {
+        int sum = 0;
+        for (int i = start; i < end; i++) {
+            sum += scores[i];
+        }
+        return sum / scores.length;
+    }
 }
