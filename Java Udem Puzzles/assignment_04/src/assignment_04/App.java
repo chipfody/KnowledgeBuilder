@@ -18,8 +18,8 @@ public class App {
 		birdsSinging(95, true) <b>---></b> true <br>
 	 */
 	public static boolean birdsSinging(int temp, boolean isSummer) {
-		
-		return true;		
+		return isSummer ? temp >= 60 && temp <=100 : temp >= 60 && temp <=90;
+
 	}
 	
 	
