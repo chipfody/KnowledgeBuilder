@@ -1,8 +1,8 @@
-package ignore;
+package assignment_05.src.ignore;
 
-import assignment_05.App;
+import assignment_05.src.assignment_05.App;
 
-public class TestingUtils {
+public class TestingUtils5 {
 	public static void runTests(){
 		
 

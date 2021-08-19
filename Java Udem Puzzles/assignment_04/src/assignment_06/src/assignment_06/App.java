@@ -1,4 +1,4 @@
-package assignment_06;
+package assignment_06.src.assignment_06;
 
 import ignore.TestingUtils;
 
@@ -17,7 +17,8 @@ public class App {
 		isCool(24) <b>---></b> false <br>
 	 */
 		public static boolean isCool(int n) {
-			return true;
+
+			return n % 11 == 0 || (n % 11)  == 1 ;
 		}
 
 	

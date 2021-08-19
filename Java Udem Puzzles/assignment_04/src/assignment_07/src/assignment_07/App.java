@@ -1,4 +1,4 @@
-package assignment_07;
+package assignment_07.src.assignment_07;
 
 import ignore.TestingUtils;
 
@@ -22,7 +22,7 @@ public class App {
 	 */
 	public static String fizzyWizzy(int n) {
 		    
-		    return n + "!";
+		    return String.valueOf(n) + "!";
 		    
 
 		}

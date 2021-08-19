@@ -1,5 +1,6 @@
-package assignment_05;
+package assignment_05.src.assignment_05;
 
+import assignment_05.src.ignore.TestingUtils5;
 import ignore.TestingUtils;
 
 public class App {
@@ -18,7 +19,7 @@ public class App {
 	 */
 	public static boolean isOrdered(int first, int second, int third, boolean itsOk) {
 		
-		return true;
+		return itsOk ? second < third : first < second && second < third;
 	}
 	
 	
@@ -33,7 +34,7 @@ public class App {
 	
 	//----------------------STARTING POINT OF PROGRAM. IGNORE BELOW --------------------//
 	public static void main(String args[]){
-		TestingUtils.runTests();
+		TestingUtils5.runTests();
 	}
 }
 
